@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>Registration - Online Voting System</title>
+    <style>
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        body { padding: 30px; background: #ecf0f1; font-family: 'Segoe UI', Tahoma, sans-serif; }
+        h2 { color: #2c3e50; margin-bottom: 20px; }
+        form { max-width: 400px; }
+        label { display: block; margin-bottom: 15px; color: #34495e; font-weight: 500; }
+        input[type="text"], input[type="password"], input[type="email"], select { 
+            width: 100%; padding: 10px 12px; margin-top: 5px;
+            border: 1px solid #bdc3c7; border-radius: 6px;
+        }
+        input[type="submit"] { 
+            padding: 10px 24px; background: #27ae60; color: white; border: none; 
+            border-radius: 6px; cursor: pointer; font-weight: 600; margin-right: 8px;
+        }
+        input[type="reset"] { 
+            padding: 10px 24px; background: #95a5a6; color: white; border: none; 
+            border-radius: 6px; cursor: pointer;
+        }
+    </style>
+</head>
+<body>
+    <h2>Voter Registration Form</h2>
+    <form action="#" method="post">
+        <label>Full Name: <input type="text" name="fullname"></label>
+        <label>Voter ID: <input type="text" name="voterid"></label>
+        <label>Password: <input type="password" name="password"></label>
+        <label>Email: <input type="email" name="email"></label>
+        <label>Phone: <input type="text" name="phone"></label>
+        <label>Constituency: 
+            <select name="constituency">
+                <option>North District</option>
+                <option>South District</option>
+                <option>East District</option>
+                <option>West District</option>
+            </select>
+        </label>
+        <p><input type="submit" value="Register"> <input type="reset" value="Reset"></p>
+    </form>
+</body>
+</html>

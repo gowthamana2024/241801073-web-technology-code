@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>Online Voting System - Voter Registration Form</title>
+    <style>
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        body { 
+            background: linear-gradient(135deg, #1a5276 0%, #2980b9 100%); 
+            font-family: 'Segoe UI', Tahoma, sans-serif;
+            padding: 40px 20px;
+        }
+        .container { 
+            max-width: 550px; margin: 0 auto; 
+            background: white; padding: 35px; 
+            border-radius: 12px; box-shadow: 0 8px 32px rgba(0,0,0,0.2);
+        }
+        h1 { color: #2c3e50; margin-bottom: 25px; font-size: 1.6em; }
+        fieldset { 
+            border: 1px solid #bdc3c7; border-radius: 8px; 
+            padding: 20px; margin-bottom: 20px;
+        }
+        legend { 
+            color: #2980b9; font-weight: 600; padding: 0 10px;
+        }
+        label { display: block; margin-bottom: 12px; color: #34495e; font-weight: 500; }
+        input[type="text"], input[type="email"], input[type="password"], input[type="number"], textarea, select { 
+            width: 100%; padding: 10px 12px; margin-top: 5px;
+            border: 1px solid #bdc3c7; border-radius: 6px;
+        }
+        textarea { resize: vertical; }
+        input[type="radio"], input[type="checkbox"] { margin-right: 8px; }
+        .radio-group label, .checkbox-group label { display: inline-block; margin-right: 20px; margin-bottom: 8px; }
+        input[type="submit"] { 
+            padding: 12px 28px; background: #27ae60; color: white; border: none; 
+            border-radius: 6px; cursor: pointer; font-weight: 600; margin-right: 10px;
+        }
+        input[type="reset"] { 
+            padding: 12px 28px; background: #95a5a6; color: white; border: none; 
+            border-radius: 6px; cursor: pointer;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+    <h1>Online Voting System - Voter Registration</h1>
+    <form action="submit.php" method="post">
+        <fieldset>
+            <legend>Personal Information</legend>
+            <p><label>Full Name: <input type="text" name="fullname" required></label></p>
+            <p><label>Email: <input type="email" name="email" required></label></p>
+            <p><label>Password: <input type="password" name="password" required></label></p>
+            <p><label>Age: <input type="number" name="age" min="18" max="120" required></label></p>
+        </fieldset>
+        <fieldset>
+            <legend>Gender</legend>
+            <p class="radio-group">
+                <label><input type="radio" name="gender" value="male" required> Male</label>
+                <label><input type="radio" name="gender" value="female"> Female</label>
+                <label><input type="radio" name="gender" value="other"> Other</label>
+            </p>
+        </fieldset>
+        <fieldset>
+            <legend>Voting Preferences</legend>
+            <p class="checkbox-group">
+                <label><input type="checkbox" name="preferences[]" value="email"> Email notifications</label>
+                <label><input type="checkbox" name="preferences[]" value="sms"> SMS notifications</label>
+                <label><input type="checkbox" name="preferences[]" value="postal"> Postal ballot option</label>
+            </p>
+        </fieldset>
+        <fieldset>
+            <legend>Constituency</legend>
+            <p>
+                <label>Select Constituency:
+                    <select name="constituency" required>
+                        <option value="">-- Select --</option>
+                        <option value="north">North District</option>
+                        <option value="south">South District</option>
+                        <option value="east">East District</option>
+                        <option value="west">West District</option>
+                    </select>
+                </label>
+            </p>
+        </fieldset>
+        <fieldset>
+            <legend>Additional Information</legend>
+            <p>
+                <label>Address / Remarks:<br>
+                    <textarea name="remarks" rows="4" cols="50" required></textarea>
+                </label>
+            </p>
+        </fieldset>
+        <p>
+            <input type="submit" value="Submit">
+            <input type="reset" value="Reset">
+        </p>
+    </form>
+    </div>
+</body>
+</html>

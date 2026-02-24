@@ -1,0 +1,25 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="400" height="300" viewBox="0 0 400 300">
+  <defs>
+    <linearGradient id="vote" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#2980b9"/>
+      <stop offset="100%" style="stop-color:#3498db"/>
+    </linearGradient>
+    <linearGradient id="results" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#27ae60"/>
+      <stop offset="100%" style="stop-color:#2ecc71"/>
+    </linearGradient>
+    <linearGradient id="register" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#8e44ad"/>
+      <stop offset="100%" style="stop-color:#9b59b6"/>
+    </linearGradient>
+    <filter id="shadow">
+      <feDropShadow dx="0" dy="2" stdDeviation="3" flood-opacity="0.2"/>
+    </filter>
+  </defs>
+  <rect x="50" y="50" width="300" height="70" fill="url(#vote)" stroke="#1a5276" stroke-width="1.5" rx="8" filter="url(#shadow)"/>
+  <text x="200" y="95" text-anchor="middle" fill="white" font-size="18" font-weight="bold" font-family="Segoe UI,Arial,sans-serif">VOTE NOW</text>
+  <rect x="50" y="130" width="300" height="70" fill="url(#results)" stroke="#1e8449" stroke-width="1.5" rx="8" filter="url(#shadow)"/>
+  <text x="200" y="175" text-anchor="middle" fill="white" font-size="18" font-weight="bold" font-family="Segoe UI,Arial,sans-serif">VIEW RESULTS</text>
+  <rect x="50" y="210" width="300" height="70" fill="url(#register)" stroke="#6c3483" stroke-width="1.5" rx="8" filter="url(#shadow)"/>
+  <text x="200" y="255" text-anchor="middle" fill="white" font-size="18" font-weight="bold" font-family="Segoe UI,Arial,sans-serif">REGISTER</text>
+</svg>

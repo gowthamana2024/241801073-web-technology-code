@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>Image Map - Online Voting System</title>
+    <style>
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        body { 
+            padding: 20px; 
+            background: #2c3e50; 
+            font-family: 'Segoe UI', Tahoma, sans-serif;
+            text-align: center;
+        }
+        h3 { color: #ecf0f1; margin-bottom: 15px; font-size: 0.95em; }
+        img { 
+            border-radius: 10px; 
+            box-shadow: 0 4px 15px rgba(0,0,0,0.3);
+        }
+        p { color: #bdc3c7; font-size: 0.85em; margin-top: 12px; }
+    </style>
+</head>
+<body>
+    <h3>Click on an area below</h3>
+    <img src="voting-map.svg" alt="Online Voting System Map" usemap="#votingmap" width="400" height="300">
+    <map name="votingmap">
+        <area shape="rect" coords="50,50,350,120" href="vote.html" target="rightFrame" alt="Vote Now">
+        <area shape="rect" coords="50,130,350,200" href="results.html" target="rightFrame" alt="View Results">
+        <area shape="rect" coords="50,210,350,280" href="register.html" target="rightFrame" alt="Register">
+    </map>
+    <p>Rectangular hotspots: Vote | Results | Register</p>
+</body>
+</html>
